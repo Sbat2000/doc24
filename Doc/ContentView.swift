@@ -9,13 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List() {
+            ForEach(0..<5) { _ in
+                DoctorPreviewView()
+                    .onTapGesture {
+                        // Здесь ваш код для обработки касания по ячейке
+                        print("Ячейка была нажата")
+                    }
+            }
+            //.listRowInsets(EdgeInsets())
         }
-        .padding()
+        .listStyle(.automatic)
+        .listRowSpacing(16)
     }
 }
 
