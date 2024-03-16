@@ -8,19 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject private var viewModel = DoctorPreviewViewModel()
+    
     var body: some View {
-        List() {
-            ForEach(0..<5) { _ in
-                DoctorPreviewView()
-                    .onTapGesture {
-                        // Здесь ваш код для обработки касания по ячейке
-                        print("Ячейка была нажата")
-                    }
-            }
+        List(viewModel.doctors) { doctor in
+            DoctorPreviewView(doctor: doctor)
             //.listRowInsets(EdgeInsets())
         }
         .listStyle(.automatic)
         .listRowSpacing(16)
+        .onAppear {viewModel.loadUsers()}
     }
 }
 

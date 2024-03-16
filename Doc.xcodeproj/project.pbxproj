@@ -12,6 +12,14 @@
 		E290ACDB2BA31BAE00B15519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E290ACDA2BA31BAE00B15519 /* Assets.xcassets */; };
 		E290ACDE2BA31BAE00B15519 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E290ACDD2BA31BAE00B15519 /* Preview Assets.xcassets */; };
 		E290ACE52BA31CAD00B15519 /* DoctorPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290ACE42BA31CAD00B15519 /* DoctorPreviewView.swift */; };
+		E290AD092BA4055200B15519 /* DoctorsDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290AD082BA4055200B15519 /* DoctorsDataLoader.swift */; };
+		E290AD0D2BA40B3B00B15519 /* DoctorsResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290AD0C2BA40B3B00B15519 /* DoctorsResponseModels.swift */; };
+		E290AD0F2BA411CE00B15519 /* DoctorPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290AD0E2BA411CE00B15519 /* DoctorPreviewViewModel.swift */; };
+		E290AD162BA5A52B00B15519 /* DoctorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290AD152BA5A52B00B15519 /* DoctorModel.swift */; };
+		E290AD182BA5A8B500B15519 /* DataConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290AD172BA5A8B500B15519 /* DataConverter.swift */; };
+		E290AD1A2BA5AF4400B15519 /* DoctorAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290AD192BA5AF4400B15519 /* DoctorAvatarView.swift */; };
+		E290AD1D2BA5AF7400B15519 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E290AD1C2BA5AF7400B15519 /* Kingfisher */; };
+		E290AD202BA5CDAD00B15519 /* DoctorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290AD1F2BA5CDAD00B15519 /* DoctorDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +29,13 @@
 		E290ACDA2BA31BAE00B15519 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E290ACDD2BA31BAE00B15519 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E290ACE42BA31CAD00B15519 /* DoctorPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorPreviewView.swift; sourceTree = "<group>"; };
+		E290AD082BA4055200B15519 /* DoctorsDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsDataLoader.swift; sourceTree = "<group>"; };
+		E290AD0C2BA40B3B00B15519 /* DoctorsResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsResponseModels.swift; sourceTree = "<group>"; };
+		E290AD0E2BA411CE00B15519 /* DoctorPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorPreviewViewModel.swift; sourceTree = "<group>"; };
+		E290AD152BA5A52B00B15519 /* DoctorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorModel.swift; sourceTree = "<group>"; };
+		E290AD172BA5A8B500B15519 /* DataConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConverter.swift; sourceTree = "<group>"; };
+		E290AD192BA5AF4400B15519 /* DoctorAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAvatarView.swift; sourceTree = "<group>"; };
+		E290AD1F2BA5CDAD00B15519 /* DoctorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E290AD1D2BA5AF7400B15519 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,11 +69,13 @@
 		E290ACD52BA31BAD00B15519 /* Doc */ = {
 			isa = PBXGroup;
 			children = (
+				E290AD1E2BA5CD8F00B15519 /* DetailDoctorModule */,
+				E290AD142BA5A35B00B15519 /* NetworkLayer */,
+				E290AD102BA5A2D100B15519 /* DoctorsModule */,
 				E290ACD62BA31BAD00B15519 /* DocApp.swift */,
 				E290ACD82BA31BAD00B15519 /* ContentView.swift */,
 				E290ACDA2BA31BAE00B15519 /* Assets.xcassets */,
 				E290ACDC2BA31BAE00B15519 /* Preview Content */,
-				E290ACE42BA31CAD00B15519 /* DoctorPreviewView.swift */,
 			);
 			path = Doc;
 			sourceTree = "<group>";
@@ -68,6 +86,59 @@
 				E290ACDD2BA31BAE00B15519 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E290AD102BA5A2D100B15519 /* DoctorsModule */ = {
+			isa = PBXGroup;
+			children = (
+				E290AD132BA5A2EE00B15519 /* Model */,
+				E290AD122BA5A2E700B15519 /* ViewModel */,
+				E290AD112BA5A2E100B15519 /* View */,
+			);
+			path = DoctorsModule;
+			sourceTree = "<group>";
+		};
+		E290AD112BA5A2E100B15519 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E290ACE42BA31CAD00B15519 /* DoctorPreviewView.swift */,
+				E290AD192BA5AF4400B15519 /* DoctorAvatarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E290AD122BA5A2E700B15519 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E290AD0E2BA411CE00B15519 /* DoctorPreviewViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E290AD132BA5A2EE00B15519 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E290AD152BA5A52B00B15519 /* DoctorModel.swift */,
+				E290AD172BA5A8B500B15519 /* DataConverter.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E290AD142BA5A35B00B15519 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				E290AD082BA4055200B15519 /* DoctorsDataLoader.swift */,
+				E290AD0C2BA40B3B00B15519 /* DoctorsResponseModels.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		E290AD1E2BA5CD8F00B15519 /* DetailDoctorModule */ = {
+			isa = PBXGroup;
+			children = (
+				E290AD1F2BA5CDAD00B15519 /* DoctorDetailView.swift */,
+			);
+			path = DetailDoctorModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +157,9 @@
 			dependencies = (
 			);
 			name = Doc;
+			packageProductDependencies = (
+				E290AD1C2BA5AF7400B15519 /* Kingfisher */,
+			);
 			productName = Doc;
 			productReference = E290ACD32BA31BAD00B15519 /* Doc.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +188,9 @@
 				Base,
 			);
 			mainGroup = E290ACCA2BA31BAD00B15519;
+			packageReferences = (
+				E290AD1B2BA5AF7400B15519 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = E290ACD42BA31BAD00B15519 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,9 +217,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E290AD182BA5A8B500B15519 /* DataConverter.swift in Sources */,
+				E290AD0F2BA411CE00B15519 /* DoctorPreviewViewModel.swift in Sources */,
+				E290AD162BA5A52B00B15519 /* DoctorModel.swift in Sources */,
 				E290ACD92BA31BAD00B15519 /* ContentView.swift in Sources */,
+				E290AD092BA4055200B15519 /* DoctorsDataLoader.swift in Sources */,
 				E290ACD72BA31BAD00B15519 /* DocApp.swift in Sources */,
 				E290ACE52BA31CAD00B15519 /* DoctorPreviewView.swift in Sources */,
+				E290AD0D2BA40B3B00B15519 /* DoctorsResponseModels.swift in Sources */,
+				E290AD202BA5CDAD00B15519 /* DoctorDetailView.swift in Sources */,
+				E290AD1A2BA5AF4400B15519 /* DoctorAvatarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +432,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E290AD1B2BA5AF7400B15519 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E290AD1C2BA5AF7400B15519 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E290AD1B2BA5AF7400B15519 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E290ACCB2BA31BAD00B15519 /* Project object */;
 }
