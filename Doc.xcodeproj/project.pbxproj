@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E290ACD72BA31BAD00B15519 /* DocApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290ACD62BA31BAD00B15519 /* DocApp.swift */; };
-		E290ACD92BA31BAD00B15519 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290ACD82BA31BAD00B15519 /* ContentView.swift */; };
+		E290ACD92BA31BAD00B15519 /* DoctorsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290ACD82BA31BAD00B15519 /* DoctorsList.swift */; };
 		E290ACDB2BA31BAE00B15519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E290ACDA2BA31BAE00B15519 /* Assets.xcassets */; };
 		E290ACDE2BA31BAE00B15519 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E290ACDD2BA31BAE00B15519 /* Preview Assets.xcassets */; };
 		E290ACE52BA31CAD00B15519 /* DoctorPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290ACE42BA31CAD00B15519 /* DoctorPreviewView.swift */; };
@@ -20,13 +20,12 @@
 		E290AD1A2BA5AF4400B15519 /* DoctorAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290AD192BA5AF4400B15519 /* DoctorAvatarView.swift */; };
 		E290AD1D2BA5AF7400B15519 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E290AD1C2BA5AF7400B15519 /* Kingfisher */; };
 		E290AD202BA5CDAD00B15519 /* DoctorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290AD1F2BA5CDAD00B15519 /* DoctorDetailView.swift */; };
-		E290AD242BA6CCC200B15519 /* SortButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290AD232BA6CCC200B15519 /* SortButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E290ACD32BA31BAD00B15519 /* Doc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E290ACD62BA31BAD00B15519 /* DocApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocApp.swift; sourceTree = "<group>"; };
-		E290ACD82BA31BAD00B15519 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E290ACD82BA31BAD00B15519 /* DoctorsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsList.swift; sourceTree = "<group>"; };
 		E290ACDA2BA31BAE00B15519 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E290ACDD2BA31BAE00B15519 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E290ACE42BA31CAD00B15519 /* DoctorPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorPreviewView.swift; sourceTree = "<group>"; };
@@ -37,7 +36,6 @@
 		E290AD172BA5A8B500B15519 /* DataConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConverter.swift; sourceTree = "<group>"; };
 		E290AD192BA5AF4400B15519 /* DoctorAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAvatarView.swift; sourceTree = "<group>"; };
 		E290AD1F2BA5CDAD00B15519 /* DoctorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailView.swift; sourceTree = "<group>"; };
-		E290AD232BA6CCC200B15519 /* SortButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,14 +69,14 @@
 		E290ACD52BA31BAD00B15519 /* Doc */ = {
 			isa = PBXGroup;
 			children = (
-				E290AD1E2BA5CD8F00B15519 /* DetailDoctorModule */,
-				E290AD142BA5A35B00B15519 /* NetworkLayer */,
+				E290ACD82BA31BAD00B15519 /* DoctorsList.swift */,
 				E290AD102BA5A2D100B15519 /* DoctorsModule */,
+				E290AD1E2BA5CD8F00B15519 /* DetailDoctorModule */,
+				E290AD262BA7243A00B15519 /* Components */,
+				E290AD142BA5A35B00B15519 /* NetworkLayer */,
 				E290ACD62BA31BAD00B15519 /* DocApp.swift */,
-				E290ACD82BA31BAD00B15519 /* ContentView.swift */,
 				E290ACDA2BA31BAE00B15519 /* Assets.xcassets */,
 				E290ACDC2BA31BAE00B15519 /* Preview Content */,
-				E290AD232BA6CCC200B15519 /* SortButton.swift */,
 			);
 			path = Doc;
 			sourceTree = "<group>";
@@ -105,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				E290ACE42BA31CAD00B15519 /* DoctorPreviewView.swift */,
-				E290AD192BA5AF4400B15519 /* DoctorAvatarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -139,9 +136,25 @@
 		E290AD1E2BA5CD8F00B15519 /* DetailDoctorModule */ = {
 			isa = PBXGroup;
 			children = (
-				E290AD1F2BA5CDAD00B15519 /* DoctorDetailView.swift */,
+				E290AD252BA7240800B15519 /* View */,
 			);
 			path = DetailDoctorModule;
+			sourceTree = "<group>";
+		};
+		E290AD252BA7240800B15519 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E290AD1F2BA5CDAD00B15519 /* DoctorDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E290AD262BA7243A00B15519 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E290AD192BA5AF4400B15519 /* DoctorAvatarView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,8 +236,7 @@
 				E290AD182BA5A8B500B15519 /* DataConverter.swift in Sources */,
 				E290AD0F2BA411CE00B15519 /* DoctorPreviewViewModel.swift in Sources */,
 				E290AD162BA5A52B00B15519 /* DoctorModel.swift in Sources */,
-				E290AD242BA6CCC200B15519 /* SortButton.swift in Sources */,
-				E290ACD92BA31BAD00B15519 /* ContentView.swift in Sources */,
+				E290ACD92BA31BAD00B15519 /* DoctorsList.swift in Sources */,
 				E290AD092BA4055200B15519 /* DoctorsDataLoader.swift in Sources */,
 				E290ACD72BA31BAD00B15519 /* DocApp.swift in Sources */,
 				E290ACE52BA31CAD00B15519 /* DoctorPreviewView.swift in Sources */,

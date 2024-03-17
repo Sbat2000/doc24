@@ -7,12 +7,10 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct DoctorsList: View {
     
     @StateObject private var viewModel = DoctorPreviewViewModel()
     @State private var searchText = ""
-    @State private var selectedSortCriterion: SortCriterion = .price
-    @State private var sortDirection: SortDirection = .ascending
     
     var body: some View {
         NavigationView {
@@ -50,5 +48,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    DoctorsList()
 }
