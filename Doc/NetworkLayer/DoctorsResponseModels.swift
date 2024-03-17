@@ -111,5 +111,4 @@ struct WorkExperience: Decodable {
     let startDate: Double?
     let endDate: Double?
     let untilNow, isModerated: Bool?
-
 }

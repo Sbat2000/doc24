@@ -20,6 +20,7 @@
 		E290AD1A2BA5AF4400B15519 /* DoctorAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290AD192BA5AF4400B15519 /* DoctorAvatarView.swift */; };
 		E290AD1D2BA5AF7400B15519 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E290AD1C2BA5AF7400B15519 /* Kingfisher */; };
 		E290AD202BA5CDAD00B15519 /* DoctorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290AD1F2BA5CDAD00B15519 /* DoctorDetailView.swift */; };
+		E290AD242BA6CCC200B15519 /* SortButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290AD232BA6CCC200B15519 /* SortButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E290AD172BA5A8B500B15519 /* DataConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConverter.swift; sourceTree = "<group>"; };
 		E290AD192BA5AF4400B15519 /* DoctorAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAvatarView.swift; sourceTree = "<group>"; };
 		E290AD1F2BA5CDAD00B15519 /* DoctorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailView.swift; sourceTree = "<group>"; };
+		E290AD232BA6CCC200B15519 /* SortButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				E290ACD82BA31BAD00B15519 /* ContentView.swift */,
 				E290ACDA2BA31BAE00B15519 /* Assets.xcassets */,
 				E290ACDC2BA31BAE00B15519 /* Preview Content */,
+				E290AD232BA6CCC200B15519 /* SortButton.swift */,
 			);
 			path = Doc;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				E290AD182BA5A8B500B15519 /* DataConverter.swift in Sources */,
 				E290AD0F2BA411CE00B15519 /* DoctorPreviewViewModel.swift in Sources */,
 				E290AD162BA5A52B00B15519 /* DoctorModel.swift in Sources */,
+				E290AD242BA6CCC200B15519 /* SortButton.swift in Sources */,
 				E290ACD92BA31BAD00B15519 /* ContentView.swift in Sources */,
 				E290AD092BA4055200B15519 /* DoctorsDataLoader.swift in Sources */,
 				E290ACD72BA31BAD00B15519 /* DocApp.swift in Sources */,

@@ -36,7 +36,7 @@ struct DoctorPreviewView: View {
                         .font(.system(size: 12))
                         .padding(-2.2)
                     }
-                    Text("\(doctor.position ?? "") \(doctor.experience)")
+                    Text("\(doctor.position ?? "") • стаж \(doctor.experience)")
                         .font(.subheadline)
                         .foregroundColor(.gray)
                         .lineLimit(1)

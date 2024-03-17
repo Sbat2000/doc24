@@ -11,7 +11,13 @@ import Combine
 class DoctorPreviewViewModel: ObservableObject {
     
     //MARK: - Public properties
+    private var rawDoctors = [DoctorModel]() {
+        didSet {
+            doctors = rawDoctors
+        }
+    }
     @Published var doctors = [DoctorModel]()
+    @Published var searchText = ""
     
     private var dataLoader = DoctorsDataLoader()
     private var cancellables = Set<AnyCancellable>()
@@ -27,8 +33,22 @@ class DoctorPreviewViewModel: ObservableObject {
                 }
             }, receiveValue: { users in
                 let doctors = DataConverter.convertUsersToDoctors(users: users)
-                self.doctors = doctors
+                self.rawDoctors = doctors
             })
             .store(in: &cancellables)
     }
+    
+    func searchDoctors() {
+        guard !searchText.isEmpty else {
+            doctors = rawDoctors
+            return
+        }
+        
+        doctors = rawDoctors.filter { doctor in
+            doctor.lastName.lowercased().contains(searchText.lowercased()) ||
+            doctor.firstName.lowercased().contains(searchText.lowercased()) ||
+            doctor.patronymic.lowercased().contains(searchText.lowercased())
+        }
+    }
 }
+

@@ -21,4 +21,9 @@ struct DoctorModel: Identifiable {
     let minPrice: String
     let isFavorite: Bool
     let nearestReceptionTime: Double?
+    let educationTypeLabel: String
+    let category: String
+    let specialization: String
+    let currentPosition: String
+    let descriptions: String
 }
